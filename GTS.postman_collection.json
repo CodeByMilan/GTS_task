@@ -1,0 +1,49 @@
+{
+	"info": {
+		"_postman_id": "9c42c068-1399-4450-b17e-cc1c8f80897e",
+		"name": "GTS",
+		"description": "Api for the question 2 TASK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38616074"
+	},
+	"item": [
+		{
+			"name": "getItems",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "api to get the all the items list"
+			},
+			"response": []
+		},
+		{
+			"name": "createPackage",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"selectedItems\": [\n    { \"name\": \"Item 1\", \"price\": 10, \"weight\": 500 },\n    { \"name\": \"Item 2\", \"price\": 20, \"weight\": 200 },\n    { \"name\": \"Item 3\", \"price\": 230, \"weight\": 100 }\n  ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/placeOrder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"placeOrder"
+					]
+				},
+				"description": "api to post the userseletected items and response with the the package according to the condition applied ."
+			},
+			"response": []
+		}
+	]
+}
